@@ -10,7 +10,18 @@ function renderBooks(filter) {
         books.sort((a, b) => b.rating - a.rating);
     }
 
-    const booksHtml = books.map(book => {
+let ratingHTML = "";
+
+for (let i = 0; i < Math.floor(rating); ++i){
+    ratingHTML += `<i class="fas fa-star"></i>`
+}
+
+if (Number.isInteger(rating)){
+    ratingHTML += `<i class="fas fa-star-half-alt"></i>`
+}
+
+    const booksHtml = books
+    .map(book => {
         return `<div class="book">
               <figure class="book__img--wrapper">
                 <img class="book__img" src="${book.url}" alt="">
