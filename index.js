@@ -1,5 +1,3 @@
-your index.js should look like this
-
 let books = getBooks();
 
 function openMenu() {
