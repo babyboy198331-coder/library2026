@@ -41,6 +41,7 @@ for (let i = 0; i < Math.floor(rating); ++i){
 if (Number.isInteger(rating)){
     ratingHTML += `<i class="fas fa-star-half-alt"></i>`
 }
+return ratingHTML;
 }
 
 
