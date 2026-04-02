@@ -20,7 +20,7 @@ function renderBooks(filter) {
             ${book.title}
         </div>
         <div class="book__ratings">
-            ${ratingHTML}
+            ${ratingsHTML(book.rating)}
         </div>
         <div class="book__price">
             <span class="book__price--normal">$${book.originalPrice.toFixed(2)}</span> $${book.salePrice.toFixed(2)}
