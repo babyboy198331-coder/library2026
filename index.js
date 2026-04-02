@@ -4,9 +4,11 @@ function renderBooks(filter) {
  const books = getBooks();
 
 if (filter === "Low_To_high") {
-    const filteredBooks =books.sort((a, b) => a.originalPrice - b.originalPrice);
+    books.sort((a, b) => a.originalPrice - b.originalPrice);
 }
-
+else if (filter === "HIGH_TO_LOW") {
+    books.sort((a, b) => b.originalPrice - a.originalPrice);
+}
     const booksHtml = books.map(book => {
         return `<div class="book">
               <figure class="book__img--wrapper">
